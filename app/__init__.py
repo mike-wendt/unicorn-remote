@@ -7,8 +7,8 @@ from app.views import index
 from app.api import SetProgram, StopProgram
 
 
-def create_app(is_hd=True):
-    state.set_model(is_hd)
+def create_app(is_hd=True, is_phat=False):
+    state.set_model(is_hd, is_phat)
 
     app = Flask(__name__)
     app.register_blueprint(index)
